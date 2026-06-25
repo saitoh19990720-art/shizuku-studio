@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-page font-gothic text-ink antialiased;
+    /* 日本語の滲み防止・字面を整える */
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "palt" 1;
+  }
+}
