@@ -9,11 +9,27 @@ export const site = {
 };
 
 export const nav = [
+  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Works", href: "#works" },
   { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
 ];
+
+export type StackGroup = { group: string; items: string[] };
+export const about = {
+  eyebrow: "About",
+  title: "つくる人について",
+  lead: "AIとデザインで、構造をつくる人。",
+  body: "曖昧な課題を、明快で信頼できるUIへ。リサーチ・構造設計・試作から実装までを一気通貫で進めます。かわいいだけでなく、思想と、再利用できる仕組みを残すこと。在宅・非同期・テキストベースでの協働が中心です。",
+  stackTitle: "使う道具",
+  stack: [
+    { group: "Design", items: ["Figma", "UI設計", "デザインシステム", "Auto Layout"] },
+    { group: "Develop", items: ["React", "TypeScript", "Vite", "Tailwind CSS"] },
+    { group: "AI / Automation", items: ["Claude Code", "n8n", "プロンプト設計"] },
+    { group: "Ship", items: ["GitHub Pages", "Vercel"] },
+  ] as StackGroup[],
+};
 
 export const hero = {
   // 大見出しは2色（前半=ink／後半=accent）
