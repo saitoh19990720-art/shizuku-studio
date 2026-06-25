@@ -11,6 +11,7 @@ export const site = {
 export const nav = [
   { label: "Services", href: "#services" },
   { label: "Works", href: "#works" },
+  { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -87,6 +88,20 @@ export const works = {
       grad: 4,
     },
   ] as Work[],
+};
+
+export type Step = { n: string; en: string; jp: string; body: string };
+export const process = {
+  eyebrow: "Process",
+  title: "進め方",
+  caption: "繰り返せるリズム。すべての工程に、人を残す。",
+  steps: [
+    { n: "01", en: "Listen", jp: "聴く", body: "考え・悩み・目的を整理する。要望の奥にある本当の課題を見つける。" },
+    { n: "02", en: "Structure", jp: "構造設計", body: "ピクセルの前に、流れ・階層・言葉をかたちにする。" },
+    { n: "03", en: "Design", jp: "デザイン", body: "色・余白・導線を整え、静けさのある画面に落とす。" },
+    { n: "04", en: "Build", jp: "実装", body: "Claude Codeと小さな自動化で、自分の手綱でつくる。" },
+    { n: "05", en: "Refine", jp: "仕上げ", body: "出力を批判的に読む。本当のものを残し、あとは削る。" },
+  ] as Step[],
 };
 
 export const cta = {
