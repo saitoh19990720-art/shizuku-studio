@@ -25,7 +25,7 @@ export function Header() {
             <a
               key={n.href}
               href={n.href}
-              className="font-dm text-[14px] font-medium text-muted transition-colors hover:text-accent"
+              className="font-dm text-[14px] font-medium text-muted transition-colors hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {n.label}
             </a>
@@ -35,24 +35,28 @@ export function Header() {
         {/* スマホ ハンバーガー */}
         <button
           type="button"
-          aria-label="メニュー"
+          aria-label={open ? "メニューを閉じる" : "メニューを開く"}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
-          className="text-accent md:hidden"
+          className="rounded-lg text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:hidden"
         >
-          {open ? <Menu size={24} className="hidden" /> : null}
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* スマホ展開メニュー */}
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-hair/60 px-6 pb-4 pt-2 md:hidden">
+        <nav
+          id="mobile-nav"
+          className="flex flex-col gap-1 border-t border-hair/60 px-6 pb-4 pt-2 md:hidden"
+        >
           {nav.map((n) => (
             <a
               key={n.href}
               href={n.href}
               onClick={() => setOpen(false)}
-              className="rounded-xl px-2 py-3 font-gothic text-[15px] font-bold text-ink hover:bg-white"
+              className="rounded-xl px-2 py-3 font-gothic text-[15px] font-bold text-ink hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {n.label}
             </a>

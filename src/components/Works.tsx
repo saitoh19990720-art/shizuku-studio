@@ -30,7 +30,8 @@ export function Works() {
               href={w.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col gap-4"
+              aria-label={`${w.title} を開く（別タブ）`}
+              className="group flex flex-col gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <div
                 className="relative flex aspect-[16/10] items-end overflow-hidden rounded-[24px] p-5 ring-1 ring-hair/50"
@@ -62,7 +63,7 @@ export function Works() {
             href={works.moreHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-[52px] w-full max-w-[342px] items-center justify-center gap-2 rounded-full border border-accent px-8 font-gothic text-[15px] font-bold text-accent transition-colors hover:bg-page"
+            className="inline-flex h-[52px] w-full max-w-[342px] items-center justify-center gap-2 rounded-full border border-accent px-8 font-gothic text-[15px] font-bold text-accent transition-colors hover:bg-page focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             {works.more}
             <ArrowUpRight size={18} />

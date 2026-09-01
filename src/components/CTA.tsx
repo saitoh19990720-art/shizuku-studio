@@ -24,9 +24,7 @@ export function CTA() {
         </h2>
         <a
           href={cta.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex h-[52px] w-full max-w-[420px] items-center justify-center rounded-full bg-accent px-8 font-gothic text-[15px] font-bold text-white transition-opacity hover:opacity-90"
+          className="inline-flex h-[52px] w-full max-w-[420px] items-center justify-center rounded-full bg-accent px-8 font-gothic text-[15px] font-bold text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           {cta.button}
         </a>

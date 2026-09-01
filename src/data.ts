@@ -123,17 +123,18 @@ export const process = {
 export const cta = {
   title: "いっしょに、かわいくて、使えるものをつくろう。",
   button: "お問い合わせ・お仕事の相談",
-  // TODO: 本物の連絡先に差し替え（メール or フォームURL）。今は作品ハブへ。
-  href: "https://saitoh19990720-art.github.io/works/",
+  // 公開連絡先は LP と同じ本人承認済みアドレス（2026-08-25 決定）。
+  href: "mailto:saitoh19990720@gmail.com",
 };
 
+export type FooterLink = { label: string; href?: string };
 export const footer = {
   brand: "Shizuku Studio",
-  copyright: "© 2025 Shizuku Studio",
-  // TODO: 本物のSNS URLに差し替え（今は # の仮リンク）
+  copyright: "© 2026 Shizuku Studio",
+  // SNS の公開URLは未承認。ラベルは残し、href が無い項目はリンクにしない。
   links: [
-    { label: "X", href: "#" },
-    { label: "Instagram", href: "#" },
-    { label: "Note", href: "#" },
-  ],
+    { label: "X" },
+    { label: "Instagram" },
+    { label: "Note" },
+  ] as FooterLink[],
 };
