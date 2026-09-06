@@ -9,7 +9,10 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-hair/60 bg-page/80 backdrop-blur">
       <div className="mx-auto flex max-w-shell items-center justify-between px-6 py-4 lg:px-10">
         {/* ロゴ */}
-        <a href="#top" className="flex flex-col leading-none">
+        <a
+          href="#top"
+          className="flex flex-col rounded-sm leading-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        >
           <span className="flex items-center gap-1">
             <span className="font-dm text-[18px] font-bold text-ink">{site.brand}</span>
             <span className="font-gothic text-[14px] text-muted">{site.brandMark}</span>

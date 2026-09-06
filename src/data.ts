@@ -79,7 +79,8 @@ export const works = {
       tag: "ツール / Web",
       title: "UTM Builder",
       desc: "計測リンクを迷わず作る、淡色＋明朝の軽量ツール。",
-      href: "https://portfolio-sizuku.vercel.app/utm.html",
+      // 旧公開URL（portfolio-sizuku.vercel.app/utm.html）は 404。実体は GitHub。
+      href: "https://github.com/saitoh19990720-art/utm-builder",
       grad: 1,
     },
     {

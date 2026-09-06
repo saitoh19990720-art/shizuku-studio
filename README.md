@@ -55,6 +55,7 @@ docs/            GitHub Pages 用のビルド成果物
 - 連絡先（CTA）は本人承認済みの公開メール（2026-08-25 決定）。変更は `src/data.ts` の `cta.href` だけ。
 - フッターの SNS はラベルのみ。公開URLが承認されたら `footer.links` に `href` を足す。
 - Works のサムネは実画面を偽装しない淡色グラデ。実作品へは各カードからリンクする。
+- UTM Builder は公開ページが 404 のため、実体の GitHub リポジトリへリンクしている。
 
 ## Future Improvements
 
