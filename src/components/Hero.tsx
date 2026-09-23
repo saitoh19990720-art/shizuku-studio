@@ -28,13 +28,13 @@ export function Hero() {
           <div className="mt-3 flex flex-col gap-3 sm:flex-row">
             <a
               href="#works"
-              className="inline-flex h-[52px] items-center justify-center rounded-full bg-accent px-8 font-gothic text-[15px] font-bold text-white transition-opacity hover:opacity-90"
+              className="inline-flex h-[52px] items-center justify-center rounded-full bg-accent px-8 font-gothic text-[15px] font-bold text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {hero.primary}
             </a>
             <a
               href="#contact"
-              className="inline-flex h-[52px] items-center justify-center rounded-full border border-accent px-8 font-gothic text-[15px] font-bold text-accent transition-colors hover:bg-white"
+              className="inline-flex h-[52px] items-center justify-center rounded-full border border-accent px-8 font-gothic text-[15px] font-bold text-accent transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {hero.secondary}
             </a>

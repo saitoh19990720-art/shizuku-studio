@@ -5,3 +5,6 @@ dist-ssr
 .DS_Store
 .vscode/*
 !.vscode/extensions.json
+
+# AIエージェント用の内部メモ（監査結果・作業状態）。公開リポジトリのため追跡しない
+.ai/

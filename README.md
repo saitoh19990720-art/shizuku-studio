@@ -5,9 +5,11 @@ Figma デザイン「Shizuku Studio」をそのまま実装した、スマホ／
 
 ## Overview
 
-- 1ページ構成：Hero → Services（できること）→ Works（制作実績）→ Contact
+- 1ページ構成：Hero → About → Services → Works → Process → Contact
 - 世界観：水色・白・透明感／見出しは明朝（Shippori Mincho）
 - すべての文言・画像は `src/data.ts` に集約（差し替えやすい）
+- 公開先：GitHub Pages（`docs/` へビルド。`base: "./"`）
+  - https://saitoh19990720-art.github.io/shizuku-studio/
 
 ## Tech Stack
 
@@ -21,7 +23,7 @@ Figma デザイン「Shizuku Studio」をそのまま実装した、スマホ／
 ```bash
 npm install
 npm run dev      # ローカル起動（http://localhost:5173）
-npm run build    # 本番ビルド（dist/）
+npm run build    # 本番ビルド（docs/）
 npm run preview  # ビルド結果の確認
 ```
 
@@ -29,10 +31,11 @@ npm run preview  # ビルド結果の確認
 
 ```
 src/
-  assets/        作品サムネ・CTA背景（Figma書き出し）
-  components/    Header / Hero / Services / Works / CTA / Footer
+  assets/        作品サムネ・CTA背景（Figma書き出し。今は未使用）
+  components/    Header / Hero / About / Services / Works / Process / CTA / Footer
   data.ts        文言・素材の一元管理
   App.tsx        セクションの組み立て
+docs/            GitHub Pages 用のビルド成果物
 ```
 
 ## Design Tokens（Figma「Shizuku Studio」より）
@@ -49,11 +52,13 @@ src/
 
 ## Notes
 
-- 連絡先（CTA・フッターのSNS）は現在ダミー（`#`）。本物のURL/メールに差し替え予定。
-- Works のサムネはイメージ素材。実作品の差し替えは今後。
+- 連絡先（CTA）は本人承認済みの公開メール（2026-08-25 決定）。変更は `src/data.ts` の `cta.href` だけ。
+- フッターの SNS はラベルのみ。公開URLが承認されたら `footer.links` に `href` を足す。
+- Works のサムネは実画面を偽装しない淡色グラデ。実作品へは各カードからリンクする。
+- UTM Builder は公開ページが 404 のため、実体の GitHub リポジトリへリンクしている。
 
 ## Future Improvements
 
-- Process セクションの追加
-- 各 Work の詳細ページ／実リンク
-- お問い合わせフォーム
+- 各 Work の詳細ページ
+- お問い合わせフォーム（今は mailto で足りている）
+- SNS の公開URL差し込み（本人承認後）
